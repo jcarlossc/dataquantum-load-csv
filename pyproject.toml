@@ -1,12 +1,14 @@
 [project]
 name = "dataquantum-load-csv"
 version = "0.2.1"
-description = ""
+description = "Python package for reading CSV files"
 authors = [
     {name = "jcarlossc",email = "jcarlossc1977@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.11,<4.0"
+license = "MIT"
+keywords = ["CSV", "DataFrame", "dataquantum"]
 dependencies = [
     "pandas (>=3.1.0,<4.0.0)",
     "pandas-stubs (>=3.1.0.261029,<4.0.0.0)"
@@ -28,3 +30,15 @@ dev = [
     "taskipy (>=1.14.1,<2.0.0)",
     "pre-commit (>=4.7.0,<5.0.0)"
 ]
+
+[tool.taskipy.tasks]
+pytest = "poetry run pytest ."
+covhtml = "poetry run pytest --cov=dataquantum_load_csv --cov-report=html"
+covcmd = "poetry run pytest --cov=dataquantum_load_csv --cov-report=term-missing"
+format = "poetry run ruff format ."
+lint = "poetry run ruff check ."
+mypy = "poetry run mypy src"
+check = "poetry run ruff check . && poetry run ruff format --check ."
+precommit = "poetry run pre-commit run --all-files"
+fix = "poetry run ruff check . --fix"
+release-check = "poetry run ruff check . && poetry run ruff format --check . && poetry run mypy src && poetry run pytest --cov=dataquantum_yaml_reader --cov-report=term-missing --cov-fail-under=90 && poetry build"
