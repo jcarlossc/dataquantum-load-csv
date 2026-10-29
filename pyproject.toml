@@ -1,6 +1,6 @@
 [project]
 name = "dataquantum-load-csv"
-version = "0.2.2"
+version = "0.2.3"
 description = "Python package for reading CSV files"
 authors = [
     {name = "jcarlossc",email = "jcarlossc1977@gmail.com"}
