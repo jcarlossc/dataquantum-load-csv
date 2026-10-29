@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/jcarlossc/dataquantum-load-csv/compare/v0.2.0...v0.2.1) (2026-10-29)
+
+
+### Documentation
+
+* docstring added ([43a64e5](https://github.com/jcarlossc/dataquantum-load-csv/commit/43a64e59c59a4f00c59ddee43a4111f027833c5a))
+* docstring added ([869afad](https://github.com/jcarlossc/dataquantum-load-csv/commit/869afad69bc2a63d56952c5a938dcd80557ae64f))
+
 ## [0.2.0](https://github.com/jcarlossc/dataquantum-load-csv/compare/v0.1.0...v0.2.0) (2026-10-29)
 
 
