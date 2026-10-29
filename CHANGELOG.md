@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.2](https://github.com/jcarlossc/dataquantum-load-csv/compare/v0.2.1...v0.2.2) (2026-10-29)
+
+
+### Bug Fixes
+
+* pyproject updated and test modified ([785f98d](https://github.com/jcarlossc/dataquantum-load-csv/commit/785f98d807f0288d199b652edece475dd9c6fcbc))
+* pyproject updated and test modified ([e3b55f0](https://github.com/jcarlossc/dataquantum-load-csv/commit/e3b55f0b808d684d42c91d89ee3b03923c428ccd))
+
 ## [0.2.1](https://github.com/jcarlossc/dataquantum-load-csv/compare/v0.2.0...v0.2.1) (2026-10-29)
 
 
