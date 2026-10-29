@@ -70,8 +70,10 @@ def test_load_csv_unexpected_error(tmp_path, monkeypatch, caplog):
 
     monkeypatch.setattr(pd, "read_csv", mock_read_csv)
 
-    with caplog.at_level(logging.ERROR):
-        with pytest.raises(RuntimeError, match="Unexpected test error"):
-            get_load_csv(str(file_csv))
+    with (
+        caplog.at_level(logging.ERROR),
+        pytest.raises(RuntimeError, match="Unexpected test error"),
+    ):
+        get_load_csv(str(file_csv))
 
     assert "Unexpected error loading CSV" in caplog.text
