@@ -1,4 +1,19 @@
-# CHANGELOG
+# Changelog
+
+## [0.2.0](https://github.com/jcarlossc/dataquantum-load-csv/compare/v0.1.0...v0.2.0) (2026-10-29)
+
+
+### Features
+
+* load_csv function and tests added ([9167e5e](https://github.com/jcarlossc/dataquantum-load-csv/commit/9167e5e344eb2ac4cf748f6ba048ad2a195077f8))
+* load_csv function and tests added ([b2fa947](https://github.com/jcarlossc/dataquantum-load-csv/commit/b2fa9479a2300190e8469167c87a842c06e36e81))
+
+
+### Bug Fixes
+
+* ci.yml modified ([956a14e](https://github.com/jcarlossc/dataquantum-load-csv/commit/956a14e5c1fe3f9245a1a03d34a836a0c951c73d))
+
+## CHANGELOG
 
 All notable changes to this project will be documented in this file.
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
