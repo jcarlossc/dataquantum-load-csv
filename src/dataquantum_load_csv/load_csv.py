@@ -11,6 +11,34 @@ def get_load_csv(
     sep: str = ",",
     encoding: str = "utf-8",
 ) -> pd.DataFrame:
+    """Load a CSV file into a pandas DataFrame.
+
+    Validate the file path, read the CSV using the specified delimiter
+    and encoding, and log the loading process.
+
+    Args:
+        file_csv: Path to the CSV file.
+        sep: Field delimiter used in the CSV. Defaults to ",".
+        encoding: Character encoding of the file. Defaults to "utf-8".
+
+    Returns:
+        A pandas DataFrame containing the loaded data.
+
+    Raises:
+        FileNotFoundError: If the specified file does not exist.
+        pd.errors.EmptyDataError: If the file contains no data or headers.
+        pd.errors.ParserError: If pandas cannot parse the CSV structure.
+        UnicodeDecodeError: If the file cannot be decoded with the
+            specified encoding.
+        Exception: Propagates unexpected exceptions raised during
+            file loading.
+
+    Example:
+        >>> df = load_csv("data/sales.csv")
+        >>> df.shape
+        (100, 5)
+    """
+
     logger = logging.getLogger(__name__)
 
     try:
