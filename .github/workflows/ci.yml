@@ -32,7 +32,7 @@ jobs:
         run: poetry install
 
       - name: Run tests
-        run: poetry run task test
+        run: poetry run task pytest
 
       - name: Build package
         run: poetry build
