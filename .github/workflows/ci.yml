@@ -1,36 +1,38 @@
-
 name: CI
 
 on:
   push:
-    branches: [main, develop]
+    branches:
+      - main
+      - develop
+
   pull_request:
-    branches: [main, develop]
+    branches:
+      - main
+      - develop
 
 jobs:
-  quality:
-    runs-on: ubuntu-latest
+  build:
+    name: Build package
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
       - name: Install Poetry
-        run: pipx install poetry
+        run: pip install poetry
 
-      - name: Install project dependencies
-        run: poetry install --with dev
+      - name: Install dependencies
+        run: poetry install
 
-      - name: Validate pre-commit configuration
-        run: poetry run pre-commit validate-config
+      - name: Run tests
+        run: poetry run task test
 
-      - name: Run pre-commit
-        run: poetry run pre-commit run --all-files
-
-      - name: Run mypy
-        run: poetry run mypy src
+      - name: Build package
+        run: poetry build
