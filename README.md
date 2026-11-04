@@ -3,8 +3,11 @@
 Leitura de arquivos CSV com Python e Pandas, com validação do caminho, registro de logs e tratamento de exceções.
 
 [![CI](https://github.com/jcarlossc/dataquantum-load-csv/actions/workflows/ci.yml/badge.svg)](https://github.com/jcarlossc/dataquantum-load-csv/actions/workflows/ci.yml)
+
 [![PyPI version](https://badge.fury.io/py/dataquantum-load-csv.svg)](https://badge.fury.io/py/dataquantum-load-csv)
+
 [![Python](https://img.shields.io/pypi/pyversions/dataquantum-load-csv)](https://pypi.org/project/dataquantum-load-csv/)
+
 [![License: MIT](https://img.shields.io/badge/Licença-MIT-blue.svg)](LICENSE)
 
 ## 📌 Sobre o projeto
@@ -218,9 +221,9 @@ Os comandos abaixo pressupõem que as tarefas correspondentes estejam definidas 
 | Comando | Finalidade |
 |---|---|
 | `poetry run task lint` | Verifica a qualidade do código. |
-| `poetry run task test` | Executa os testes automatizados. |
-| `poetry run task covhtml` | Executa os testes com cobertura. |
-| `poetry run task covcmd` | Executa os testes e mostra no console. |
+| `poetry run task pytest` | Executa os testes automatizados. |
+| `poetry run task covhtml` | Executa os testes com cobertura em arquivo html. |
+| `poetry run task covcmd` | Executa os testes com cobertura no console. |
 | `poetry run task --list` | Lista as tarefas disponíveis, conforme a versão e configuração do Taskipy. |
 
 Consulte o `pyproject.toml` para confirmar os nomes exatos das tarefas configuradas no projeto.
